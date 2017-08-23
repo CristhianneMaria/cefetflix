@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<title> CefetFLIX </title>
+		<!--
+		<link rel= "stylesheet" type="text/css" href="./css/estilo.css"/>
+		-->
+		<script src="./js/filmes.js"></script>
+		<script src="./js/jquery.min.js"></script>
+		<script>
+		
+			$(function(){
+				console.log(filmes);
+				$.each(filmes, function(indice, filme){
+				$("#filmes").append($("<li />").text(filme.titulo));
+				$("#filmes").append($("<img />").attr("src",filme.figura));
+				$("#filmes").append($("<li />").text(filme.resumo));
+				$("#filmes").append($("<li />").text(filme.generos));
+				$("#filmes").append($("<li />").text(filme.titulosSemelhantes));
+				$("#filmes").append($("<li />").text(filme.classificacao));
+				$("#filmes").append($("<li />").text(filme.elenco));
+				$("#filmes").append($("<li />").text(filme.opinioes));
+				$("#filmes").append($("<li />").text(filme.descricao));
+				
+				
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<h1>CefetFLIX</h1>
+		<div class=flix>
+			<ul id="filmes">
+			</ul>
+		</div>
+	</body>
+</html>
